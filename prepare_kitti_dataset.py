@@ -46,9 +46,10 @@ def find_sum(mat, val_to_ignore=-1):
     return total_values
 
 def read_img(image_path, image_height, image_width):
-    reader = png.Reader(image_path)
-    pngdata = reader.read()
-    I_image = np.array(map(np.uint16, pngdata[2]))
+#     reader = png.Reader(image_path)
+#     pngdata = reader.read()
+#     I_image = np.array(map(np.uint16, pngdata[2]))
+    I_image = cv2.imread(image_path, 0)
 
     H, W = I_image.shape
     if H != image_height and W != image_width:
