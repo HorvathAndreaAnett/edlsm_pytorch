@@ -1,7 +1,7 @@
 import os
 import pprint
 import tensorflow as tf
-from src.edlsm_learner import edlsmLearner
+from edlsm_learner import edlsmLearner
 
 flags = tf.app.flags
 flags.DEFINE_string("directory", "./data_scene_flow/training", "Directory to the dataset")
